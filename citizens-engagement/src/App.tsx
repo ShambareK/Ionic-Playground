@@ -10,6 +10,7 @@ import Tab1 from './pages/Tab1';
 import LogIn from './pages/LogIn';
 import FAQ from './pages/FAQ';
 import NewAccount from './pages/NewAccount';
+import Main from './pages/Main';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -49,6 +50,9 @@ const App: React.FC = () => (
           </Route>
           <Route path="/new-account">
             <NewAccount />
+          </Route>
+          <Route path="/main">
+            <Main />
           </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
