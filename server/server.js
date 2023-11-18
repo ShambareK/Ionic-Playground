@@ -2,7 +2,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.PORT || 3001;
+const dotenv = require('dotenv');
+
+dotenv.config();
+const port = process.env.PORT || 5000;
 
 // Middleware to parse JSON in request body
 app.use(bodyParser.json());
@@ -15,6 +18,22 @@ try {
 } catch (error) {
   console.error('Error reading users file:', error);
 }
+
+//send env variables to the frontend
+
+// Route to send dotenv values as JSON
+app.get('/secrets', (req, res) => {
+  const envData = {
+    REACT_APP_SUPABASE_URL: process.env.REACT_APP_SUPABASE_URL,
+    REACT_APP_SUPABASE_KEY: process.env.REACT_APP_SUPABASE_KEY,
+  };
+
+  res.json(envData);
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
 // Login route (GET)
 app.get('/login', (req, res) => {
