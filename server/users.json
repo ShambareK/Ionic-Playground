@@ -1,0 +1,13 @@
+[
+    {"password": "Abc12345", "phone": "1234567890"},
+    {"password": "Xyz98765", "phone": "2345678901"},
+    {"password": "Pwd56789", "phone": "3456789012"},
+    {"password": "Pass4321", "phone": "4567890123"},
+    {"password": "Secure12", "phone": "5678901234"},
+    {"password": "Random89", "phone": "6789012345"},
+    {"password": "Pwd12345", "phone": "7890123456"},
+    {"password": "Secret01", "phone": "8901234567"},
+    {"password": "Abcd5678", "phone": "9012345678"},
+    {"password": "9876Abcd", "phone": "0123456789"}
+  ]
+  

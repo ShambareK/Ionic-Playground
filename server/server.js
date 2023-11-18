@@ -9,7 +9,8 @@ app.use(bodyParser.json());
 
 // Login route (GET)
 app.get('/login', (req, res) => {
-  res.send('This is the login page (GET)');
+    const { phone, password } = req.body;
+    console.log(phone,password)
 });
 
 // Sign-up route (POST)
