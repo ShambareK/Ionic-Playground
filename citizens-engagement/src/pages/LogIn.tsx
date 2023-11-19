@@ -22,40 +22,10 @@ const LogIn: React.FC = () => {
  e.preventDefault();
  console.log(password,phone);
  /*Send Data To The Server*/
+ 
 
- const handleForm = async (e) => {
-  e.preventDefault();
-
-  // Create an object with the data to be sent to the server
-  const formData = {
-    password: password,
-    phone: phone
-  };
-
-  try {
-    // Make a POST request using the fetch API
-    const response = await fetch('http://localhost:3001/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        // Add any additional headers if needed
-      },
-      body: JSON.stringify(formData),
-    });
-
-    // Check if the request was successful (status code 2xx)
-    if (response.ok) {
-      // The request was successful, you can handle the response here
-      const responseData = await response.json();
-      console.log('Response from server:', responseData);
-    } else {
-      console.error('Server responded with an error:', response.status, response.statusText);
-    }
-  } catch (error) {
-    console.error('An error occurred during the fetch:', error);
-  }
-};
-
+ //redirect to Main
+ history.push('/main');
 
   }
 

@@ -28,8 +28,8 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         
-        <IonText color="primary" onClick={navigateToTab1}>
-          <h3>Main Demo</h3>
+        <IonText color="primary" >
+          <h3>About Us</h3>
         </IonText>
       </IonContent>
     </IonPage>
